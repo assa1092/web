@@ -16,17 +16,29 @@
     <div class='container'>
         <button onclick="setIronman()" class="btn btn-info">아이언맨</button>
         <button onclick="setCaptain()" class="btn btn-success">캡틴</button>
-        <img src="" alt="" id="img1" class="img-fluid" >
+        <h6 id="result"></h6>
+        <div>
+            <img src="" alt="" id="img1" class="img-fluid" >
+
+        </div>
     </div>
     <script>
         function setIronman(){
             var image =  document.getElementById("img1");
-            image.src =  "아이언맨.jpg"
+            image.src =  "아이언맨.jpg";
             image.width= "300";
-           
+            image.height = "300";
+            
+            var imgtext = image.src ;
+             document.getElementById("result").innerHTML = imgtext;
         }
         function setCaptain(){
-            document.getElementById("img1").src = "캡틴.jpg"
+            document.getElementById("img1").src = "캡틴.jpg";
+            document.getElementById("img1").width = "300";
+            document.getElementById("img1").height = "300";
+            
+            var imgtext = document.getElementById("img1").src;
+            document.getElementById("result").innerHTML = imgtext;
         }
 
     
