@@ -22,7 +22,7 @@
         function reverse(){
             var origin =  document.getElementById("input1").value;
             var array = origin.split("");  //하나하나의 단어로 나눈다 (ex. abc )
-            array  =  array.reverse()      //나눈것을 거꾸로 더한다 (ex. cba)
+            array  =  array.reverse() ;    //나눈것을 거꾸로 더한다 (ex. cba)
             var target =  array.join(" "); //사이에 공백을 넣는다. (ex. c b a )
             document.getElementById("result").innerHTML =  target;
             
