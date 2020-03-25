@@ -14,31 +14,27 @@
 </head>
 <body>
     <div class='container'>
-        <select onchange="addItem()" name="" id="select1" class="custom-select">
-            <option value="딸기">딸기</option>
-            <option value="사과">사과</option>
-            <option value="키위">키위</option>
-        </select>
-        <ul id="result"></ul>
+        <p id="para1">Lorem.</p>
+        <p id="para2">Quidem!</p>
+        <p id="para3">Tempora.</p>
     </div>
     <script>
+        //javascript 사용
+        var para1 = document.getElementById("para1").innerHTML;
+        // jQuery 사용
+        var para2 = $("#para2").html();
 
-        function removeMessage(){
-            this.remove();            
+        console.log(para1);
+        console.log(para2);
+
+        //javascript 사용
+        var paras1=document.getElementsByTagName("p");
+        for (var i = 0; i <paras1.length;i++){
+            console.log(paras1[i].innerHTML);
+            paras1[i].innerHTML = "hello";
         }
-        
-
-        function addItem(){
-            var v  =document.getElementById("select1").value;
-
-            var newItem =  document.createElement("li");
-            newItem.innerHTML =  v;
-            newItem.addEventListener("click",removeMessage);
-
-            
-
-            document.getElementById("result").appendChild(newItem);
-        }
+        //jQuery 사용
+        $("p").html("jqyery hello");
     
     </script>
 </body>
